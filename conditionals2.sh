@@ -1,5 +1,5 @@
 #!/bin/bash
-#Read in one character from the user (this may be 'Y', 'y', 'N', 'n'). If the character is 'Y' or 'y' display "YES". If the character is 'N' or 'n' display "NO". No other character will be provided as input.
+#Given three integers (X, Y, and Z) representing the three sides of a triangle, identify whether the triangle is Scalene, Isosceles, or Equilateral.
 
 read X
 read Y
@@ -14,5 +14,4 @@ then
 else
     echo ISOSCELES;
 fi
-
 
