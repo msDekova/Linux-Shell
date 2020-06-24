@@ -1,7 +1,6 @@
 #!/bin/bash
 
 if [ ! -r $1 ] 
-#|| [ "$1" != "*.c" ]
 then
 	echo "Invalid file"
 	exit 1
