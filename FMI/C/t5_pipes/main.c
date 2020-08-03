@@ -80,4 +80,6 @@ int main(int argc, char* argv[])
 	if ( execlp("uniq", "uniq", NULL) == -1	) {
 		err(4, "Failed uniq command\n");
 	}
+	
+	exit(0);
 }
