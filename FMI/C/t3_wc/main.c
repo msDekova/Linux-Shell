@@ -22,11 +22,11 @@ int main(int argc, char* argv[])
 	int rd;
 
 	if( argc != 2 ) {
-		err(1,"Invalid number of arguments\n");
+		errx(1,"Invalid number of arguments\n");
 	}
 
 	if ( (fd = open(filename, O_RDONLY) ) == -1 ) {
-		errx(2, "File failed to open in read mode\n");
+		err(2, "File failed to open in read mode\n");
 	}
 
 	while ( ( rd = read(fd, &c, 1) > 0 ) ) {
