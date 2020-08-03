@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	char *filename = argv[1];
 
 	if(argc > 2) {
-		err(1,"Invalid number of aruments\n");
+		errx(1,"Invalid number of aruments\n");
 	}
 
 	if( ( fd = open(filename, O_RDONLY) ) == -1 ) {

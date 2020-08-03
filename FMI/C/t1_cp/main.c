@@ -15,7 +15,7 @@ int main(int argc,char* argv[])
 	char c;
 	char *filename=argv[1];
 	if(argc<2){
-		err(1,"Invalid number of files");
+		errx(1,"Invalid number of files");
 	}
 	
 	if( (f1 = open(filename,O_RDONLY) ) == -1) {
