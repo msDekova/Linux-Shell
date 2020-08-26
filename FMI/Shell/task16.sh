@@ -23,7 +23,6 @@ echo "${TERM1}"
 echo "${TERM2}"
 
 RES=$(echo "${TERM2}" | grep -v "${TERM1}" | tr '\n' ' ')
-echo "${RES}"
 _TERM1=$(echo "${TERM1}" | tr '\n' ' ' )
 _TERM2=$(echo "${TERM2}" | tr '\n' ' ' )
 
