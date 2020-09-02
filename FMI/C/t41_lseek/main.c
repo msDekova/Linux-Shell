@@ -70,7 +70,10 @@ int main(int argc, char* argv[])
 	}
 	struct triple t;
 	
+// read from patch.bin
 	while( read(fd1, &t, sizeof(t)) > 0 ) {
+		
+		// set offset of f2.bin to t.offset
 		if ( lseek(fd3, t.offset, SEEK_SET) == -1 ) {
 			close(fd1);	
 			close(fd2);
@@ -78,6 +81,7 @@ int main(int argc, char* argv[])
 			err(6, "Failed to lseek");
 		}
 		
+		// check if read byte is equal to t.original and write t.new to fd3 if it is
 		read(fd3, &b, sizeof(b));
 		if( b == t.original ) {
 			if( lseek(fd3, -1, SEEK_CUR ) == -1 ) {
