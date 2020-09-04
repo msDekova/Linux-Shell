@@ -19,10 +19,6 @@ int main(int argc, char* argv[])
 	if ( argc < 2 ) {
 		errx(1, "Not enough arguments for tr command");
 	}
-	
-	if ( !strcmp(argv[1], "tr") ) {
-		errx(2, "%s should be tr", argv[1]);
-	}
 
 	const char* argv1 = argv[1];
 	const char* argv2 = argv[2];
